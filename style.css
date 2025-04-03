@@ -1,0 +1,35 @@
+body {
+   background-color: black;
+}
+
+#section1 {
+    background-color: beige;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 325px;
+    padding-bottom: 200px;
+    border-radius: 10px;
+    padding:150px;
+}
+
+
+#section2 {
+    background-color: beige;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 325px;
+    padding-bottom: 200px;
+    border-radius: 10px;
+    padding: 150px;
+}
+
+
+#section3 {
+    background-color: beige;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 325px;
+    padding:149px;
+    padding-bottom: 200px;
+    border-radius: 10px;
+}
