@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Services</title>
 </head>
 <body>
-    
+
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0b183f; padding: 1rem;">
         <div class="container">
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -34,7 +37,119 @@
             </div>
         </div>
     </nav>
-    
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Our Services You Can Preview</h2>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="img/cleaning.png" class="card-img-top" alt="Service 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Cleaning Services</h5>
+                        <p class="card-text"> Our Deep Cleaning Service goes beyond the surface to eliminate built-up dirt, grime, and bacteria. </p>
+                        <p class="fw-bold">Price: 34.99$/Hour</p>
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#service1Modal">View More!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="img/plumbing.jpg" class="card-img-top" alt="Service 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Plumbing Services</h5>
+                        <p class="card-text">Professional installation, repair, and maintenance of plumbing systems to ensure efficient water flow and prevent leaks.</p>
+                        <p class="fw-bold">Price: 24.99$/Hour</p>
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#service2Modal">View More!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="img/electricalservice.webp" class="card-img-top" alt="Service 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Electrical Services</h5>
+                        <p class="card-text">Safe and reliable installation, repair, and maintenance of electrical systems to power your home or business.</p>
+                        <p class="fw-bold">Price: 54.99$/Hour</p>
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#service3Modal">View More!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+
+
+
+   <!--MODALET ------------------------------------------------------------------------------> 
+
+   
+   <div class="modal fade" id="service1Modal" tabindex="-1" aria-labelledby="service1ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="service1ModalLabel">Deep Cleaning </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Our Deep Cleaning Service offers a thorough, top-to-bottom clean, targeting every corner of your space. Ideal for move-ins/outs, seasonal refreshes, or when your home or office needs a complete reset, we go beyond regular cleaning to tackle built-up dirt, grime, and bacteria.
+
+                    We clean high-traffic areas, under furniture, inside appliances, and even hard-to-reach spots like baseboards and ceiling fans. Our team uses eco-friendly products and professional tools to leave your space looking and feeling fresh, healthy, and inviting.
+                    
+                    Let us handle the tough cleaning, so you can enjoy a cleaner, more comfortable environment.
+                    
+                    </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="service2Modal" tabindex="-1" aria-labelledby="service2ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="service2ModalLabel">Plumbing Services!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Our plumbing services cover a wide range of needs, from fixing leaky faucets and clogged drains to installing new piping and fixtures. We use advanced tools and techniques to diagnose and resolve plumbing issues, ensuring your water supply and drainage systems operate smoothly. Our team is available for emergency repairs and routine maintenance to keep your plumbing in top condition.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="service3Modal" tabindex="-1" aria-labelledby="service3ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="service3ModalLabel">Electrical Services </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Our electrical services include wiring installations, outlet repairs, lighting upgrades, and electrical safety inspections. We ensure all work complies with local codes and standards, providing you with a safe and efficient electrical system. Whether you need a new circuit installed or an electrical panel upgrade, our licensed electricians are equipped to handle any electrical challenge.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="bg-dark text-white text-center py-3 mt-5" id="footer">
+    <p>&copy; 2025 TAL Services. All rights reserved.</p>
+</footer>
+
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
