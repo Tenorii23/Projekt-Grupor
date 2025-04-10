@@ -231,3 +231,6 @@ header h1 {
     font-weight: bold;
   }
   
+  .modal-content {
+    border-radius: 8px;
+}
