@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
+<body style="background-color: #e9f5f9;">
+
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0b183f; padding: 1rem;">
         <div class="container">
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -20,32 +21,27 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link text-white fs-4 px-3" href="index.html">
-                            <i class="fas fa-utensils"></i> Home
+                            <i class="fas fa-home"></i> Home
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white fs-4 px-3" href="contact.html">
-                            <i class="fas fa-phone-alt"></i> Contact Us
+                            <i class="fas fa-envelope"></i> Contact Us
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white fs-4 px-3" href="about us.html">
-                            <i class="fas fa-map-marker-alt"></i> About Us
+                            <i class="fas fa-info-circle"></i> About Us
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <section class="cta-banner bg-primary text-white text-center py-5">
-        <div class="container">
-            <h3>Ready to Experience the Best?</h3>
-            <p>Contact us today to schedule your service!</p>
-            <a href="contact.html" class="btn btn-light">Book Now</a>
-        </div>
-    </section>
     
+
+
+    <marquee id="welcome">Welcome To TAL Services!</marquee>
 
     <section class="hero-section">
         <div class="container">
@@ -53,7 +49,7 @@
             <p>Your one-stop destination for amazing services.</p>
             <a href="Services.html"><button id="btn1" class="btn-services">Our Services</button></a>
         </div>
-    </section>
+    </section> 
 
   
         <section class="intro-text-container">
@@ -68,37 +64,76 @@
             </p>
         </section>
 
-        <section class="testimonials">
+        <section class="faq">
             <div class="container">
-                <h2 class="text-center mb-4">What Our Customers Say</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <blockquote class="blockquote text-center">
-                            <p class="mb-0">"Amazing service! My home looks brand new."</p>
-                            <footer class="blockquote-footer">John Doe</footer>
-                        </blockquote>
+                <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What services do you offer?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We offer a range of services including deep cleaning, plumbing, electrical work, and more.
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <blockquote class="blockquote text-center">
-                            <p class="mb-0">"Reliable and professional. Highly recommend!"</p>
-                            <footer class="blockquote-footer">Jane Smith</footer>
-                        </blockquote>
-                    </div>
-                    <div class="col-md-4">
-                        <blockquote class="blockquote text-center">
-                            <p class="mb-0">"The best cleaning service I've ever used."</p>
-                            <footer class="blockquote-footer">Emily Johnson</footer>
-                        </blockquote>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How do I book a service?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                You can book a service by contacting us through our website or calling our office.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         
 
-    <footer class="bg-dark text-white text-center py-3 mt-5" id="footer">
-        <p>&copy; 2025 TAL Services. All rights reserved.</p>
-    </footer>
-
+        <section class="testimonials">
+            <div class="container">
+              <h2 class="text-center mb-4">What Our Customers Say</h2>
+              <div class="row">
+                <div class="col-md-4">
+                  <blockquote class="blockquote text-center">
+                    <p>"Amazing service! My home looks brand new."</p>
+                    <footer class="blockquote-footer">Qemil Qazimi</footer>
+                  </blockquote>
+                </div>
+                <div class="col-md-4">
+                  <blockquote class="blockquote text-center">
+                    <p>"Reliable and professional. Highly recommend!"</p>
+                    <footer class="blockquote-footer">Fatmir Goga</footer>
+                  </blockquote>
+                </div>
+                <div class="col-md-4">
+                  <blockquote class="blockquote text-center">
+                    <p>"The best cleaning service I've ever used, in my <strong>Entire life!</strong>"</p>
+                    <footer class="blockquote-footer">Hatifete Krasniqi</footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+        <footer class="bg-dark text-white text-center py-3 mt-5" id="footer1">
+            <p>Follow us on social media for more updates:</p>
+            <div class="social-icons">
+                <a href="#" class="text-white"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+            <br>
+            <p>&copy; 2025 TAL Services. All rights reserved.</p>
+        </footer>
+    
 
 
     <script src="js/jquery-3.7.1.min.js"></script>
