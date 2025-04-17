@@ -1,6 +1,23 @@
 body {
-   background-color: black;
-   font-family: 'Poppins', sans-serif;
+    background-color: #e9f5f9;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+html, body {
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
 }
 
 html, body {
@@ -8,38 +25,37 @@ html, body {
     margin: 0;
 }
 
-body {
+.wrapper {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 main {
     flex: 1;
 }
 
-#location {
-    color: beige;
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #0b183f;
+    padding: 1rem;
 }
 
-
-p {
-    color: alicebl;
+.navbar-nav .nav-link {
+    font-weight: 500;
+    transition: background-color 0.3s ease;
 }
-
 
 .navbar-nav .nav-link:hover {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
 }
-body {
-    font-family: 'Poppins', sans-serif;
-}
 
-.navbar-nav .nav-link {
-    font-weight: 500; 
-}
 .hero-section {
     text-align: center;
+    padding: 4rem 0;
 }
 
 .hero-section h1 {
@@ -59,28 +75,11 @@ body {
     padding: 10px 25px;
     border-radius: 5px;
     font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .hero-section .btn-services:hover {
     background-color: #007bff;
-}
-
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #0b183f;
-    padding: 1rem;
-}
-
-.navbar-nav .nav-link {
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
 }
 
 .intro-text-container {
@@ -112,113 +111,22 @@ body {
 .faq .accordion-button:focus {
     box-shadow: none;
 }
-.btn-services {
-    background-color: #0b183f;
-    color: white;
-    border: none;
-    padding: 7px 25px;
-    border-radius: 5px;
-}
-.btn-services:hover {
-    background-color: #007bff;
-}
+
 .card {
     border: none;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 .card-img-top {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-}
-
-footer {
-    background-color: #2d3e50;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    bottom: 0;
-    position: relative;
-    top: 220px;;
-}
-
-#footer1 {
-    background-color: #2d3e50;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    bottom: 0;
-
-}
-
-
-
-#btn1 {
-    border-radius: 8px;
-    border: transparent;
-    width:150px;
-    height: 40px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-#btn1:hover {
-    transform: scale(1.1); 
-    background-color: #2f5772; 
-}
-
-header {
-    background-color: #2d3e50;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-section {
-    padding: 20px;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-
-#introtext {
-    background-color: cornsilk;
-}
-
-.intro-text {
-    background-color:#fff;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.about-container {
-    padding: 2rem;
-    background-color: transparent;
-}
-header {
-    background-color: transparent;
-    text-align: center;
-    padding: 1rem 0;
-}
-header h1 {
-    color: #0b183f;
-}
-#h3about {
-    color: #8f0f0f; 
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    max-width: 350px;
-    max-height: fit-content;
-}
-
-.card-img-top {
     object-fit: cover;
     height: 200px;
 }
@@ -232,15 +140,23 @@ header h1 {
 
 .card-text {
     flex-grow: 1;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
-.btn {
-    margin-top: auto;
+footer {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
 }
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+
+.social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #007bff;
 }
 
 .testimonials {
@@ -250,68 +166,107 @@ header h1 {
 
 .testimonials .blockquote {
     border: none;
-    background-color:skyblue;
+    background-color: skyblue;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
     max-width: 350px;
-    max-height: fit-content;
     min-height: 200px;
 }
 
 .testimonials .blockquote p {
     font-size: 1.2rem;
     color: #333;
-    margin-bottom: 0.5rem; 
+    margin-bottom: 0.5rem;
 }
 
 .testimonials .blockquote-footer {
     font-size: 1rem;
-    color:lightblue;
+    color: lightblue;
     font-weight: bold;
-    margin-top: 0.2rem; 
-    position: static;
-    min-height: 50px;
-}
-
-
-#welcome {
-    background-color: beige;
+    margin-top: 0.2rem;
 }
 
 .contact h2 {
     font-weight: 600;
     color: #333;
-  }
-  
-  .contact .form-control {
+}
+
+.contact .form-control {
     border-radius: 13px;
     box-shadow: none;
     border: 1px solid #ccc;
-    width:500px;
-  }
-  
-  .contact .btn {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact .btn {
     border-radius: 10px;
     padding: 0.75rem;
     font-weight: bold;
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     border-radius: 8px;
 }
 
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000; 
-    background-color: #0b183f; 
-    padding: 1rem; 
+.about-container {
+    padding: 2rem;
+    background-color: transparent;
+    font-size: 20px;
 }
 
-#index {
-    position: relative;
-    bottom:50px;
-    z-index:500px ;
+.about-container header {
+    background-color: transparent;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.about-container header h1 {
+    color: #0b183f;
+}
+
+#h3about {
+    color: #8f0f0f;
+}
+
+#servicephoto {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .intro-text-container {
+        padding: 15px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .contact .form-control {
+        width: 100%;
+    }
+
+    .testimonials .blockquote {
+        max-width: 100%;
+        min-height: auto;
+    }
+
+    #servicephoto {
+        max-width: 100%;
+    }
 }
